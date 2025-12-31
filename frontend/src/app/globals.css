@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+
+  /* Custom Animations */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+}
+
+
+:root {
+  --background: #0b0c2a;
+  --foreground: #ffffff;
+  --card-bg: #11112b;
+  --brand-pink: #ff3269;
+  --brand-purple: #36005c;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
